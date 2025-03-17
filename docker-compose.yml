@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  vimeo_downloader:
+    build: .
+    container_name: vimeo_downloader
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./downloaded_videos:/app/downloaded_videos  
+    environment:
+      - PYTHONUNBUFFERED=1
